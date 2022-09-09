@@ -7,6 +7,5 @@ for i in range(10, 13):
     for person in list(res.json()['results']):         
         data[person['id']] = {person['name']: {person['url']: person['type']}}
 
-# json_string = json.dumps(data)
 with open('morty.json', 'w') as outfile:
     json.dump(data, outfile,indent=4)
