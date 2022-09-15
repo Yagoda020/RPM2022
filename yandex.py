@@ -22,4 +22,6 @@ def goParse():
     
     return finish
 
-print(goParse())
+if __name__ == '__main__':
+    with open('js.json', 'w') as file:
+        json.dump(goParse(), file)
